@@ -1,0 +1,18 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang-"en">
+    <head>
+        <title>Display META</title>
+    </head>
+    <body>
+        <h1>Display META</h1>
+        <h2>request.path = {{ request.path }}</h2>
+        <h2>request.get_host = {{ request.get_host }}</h2>
+        <h2>request.get_full_path = {{ request.get_full_path }}</h2>
+        <h2>request.is_secure = {{ request.is_secure }}</h2>
+        <table>
+            {% for k, v in meta_values %}
+                <tr><td>{{ k }}</td><td>{{ v }}</td></tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>
